@@ -1,0 +1,261 @@
+/* ========================================
+   Web Genius - Ali Zuhoor Bayat
+   ======================================== */
+
+/* CSS Variables */
+:root {
+    --primary-color: rgb(39, 60, 255);
+    --primary-dark: rgb(32, 45, 154);
+    --primary-light: rgb(43, 72, 255);
+    --text-white: rgb(255, 255, 255);
+    --text-light: rgb(75, 92, 241);
+    --bg-light: aliceblue;
+    --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: url('images/bg.svg') no-repeat center/cover;
+    background-attachment: fixed;
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#logo {
+    color: var(--primary-light);
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+#logo:hover {
+    color: var(--bg-light);
+    transform: scale(1.05);
+}
+
+#navbar-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navbar-list a {
+    text-decoration: none;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: var(--text-white);
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+}
+
+#navbar-list a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(39, 60, 255, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Animation Div */
+#animation-div {
+    width: clamp(120px, 25vw, 180px);
+    height: clamp(120px, 25vw, 180px);
+    background-color: var(--primary-color);
+    border-radius: 3rem 1rem 0 10rem;
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+#animation-div:hover {
+    background-color: var(--primary-dark);
+    border-radius: 10rem 3rem 40rem 20rem;
+}
+
+/* Main Hero Section */
+main {
+    padding: 2rem;
+    max-width: 100%;
+}
+
+.greeting {
+    display: block;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    color: var(--text-white);
+    margin-bottom: 0.5rem;
+}
+
+main h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    color: var(--primary-color);
+    text-shadow: 0 0 1px var(--primary-color), 0 0 1px var(--primary-color);
+    transition: var(--transition);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+main h1:hover {
+    transform: scale(1.02);
+    color: var(--text-white);
+    text-shadow: 0 0 10px var(--primary-dark), 0 0 12px var(--primary-color);
+}
+
+.subtitle {
+    color: var(--text-light);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+.btn-cv {
+    margin-top: 2rem;
+}
+
+/* ========================================
+   Responsive Design - Tablet
+   ======================================== */
+@media (max-width: 768px) {
+    #navbar {
+        padding: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #logo {
+        flex-basis: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    #navbar-list {
+        flex-basis: 100%;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #navbar-list a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .btn-download {
+        flex-basis: 100%;
+    }
+
+    #animation-div {
+        margin: 1rem auto 2rem;
+        display: block;
+    }
+
+    main {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .btn-cv {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   Responsive Design - Mobile
+   ======================================== */
+@media (max-width: 480px) {
+    #navbar {
+        padding: 1rem 0.5rem;
+    }
+
+    #logo {
+        font-size: 1.3rem;
+    }
+
+    #navbar-list {
+        gap: 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #navbar-list a {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .greeting {
+        font-size: 1.2rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-download,
+    .btn-cv {
+        width: 100%;
+    }
+
+    #animation-div {
+        width: 100px;
+        height: 100px;
+        margin: 1rem auto 1.5rem;
+    }
+}
